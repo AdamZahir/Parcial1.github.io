@@ -1,0 +1,379 @@
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    
+}
+
+/*
+COLORES PARA LA PAGINA 
+    #c48c14  #7c447c  #9c1434  #148c6c  #040404 
+*/
+
+/* Header ----------------------------------------------------------------*/
+header {
+    width: 100%; height: 100px;
+    display: flex;
+    background-color: #001621;
+    margin: 0 auto;
+
+    justify-content: center; 
+    align-items: center;
+}
+
+.logo img{
+   width: 200px; height: auto; 
+}
+
+
+/* Nav ----------------------------------------------------------------*/
+
+nav{
+    width: 100%; height: 50px;   
+    background-color: #001621;
+    margin: 0  auto;
+    
+    justify-content: space-evenly;
+    align-items: center;
+  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon{
+    display: none;
+}
+
+nav a{
+    color: aliceblue;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 18px;
+}
+
+nav a:hover{
+    color: aliceblue;
+    background-color:    #df083e;
+}
+
+
+/* MAIN Y GENERAL ----------------------------------------------------------------*/
+main{
+    width:  100%;
+    height: auto; 
+    background-color: #001621;
+    
+   /* background-color:  rgb(255, 80, 80);*/
+    margin: 0 auto;
+}
+
+p{
+    color:aliceblue;
+    margin: 5px;
+    font-family: "Lexend", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+h3{
+    color: #df083e;
+    font-family: "Lexend", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+h2{
+    color: #df083e;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.seccion {
+    width: 100%; 
+    margin: 5px 0;
+
+    background-color: #005f73;
+    display: inline-block;
+}
+
+/* Sección 1 PRESENTACION -------------------------------------------*/
+
+#seccionUno{
+  display: flex; 
+  height: auto;
+  background-color: #1eab8d;
+}
+ 
+.bandaCompleta img{
+    width: 350px; height: auto;
+    margin: 20px 15px;
+    display: inline-block;
+}
+
+#Presentacion{
+    font-size: 17px;
+    margin: 60px 15px;
+    color: aliceblue;
+  
+}
+
+/* Sección 2 PERSONAJES  ----------------------------------------------------------------*/
+
+
+/* Hacer que los elementos dentro de la sección se alineen en línea ...... */
+#seccionDos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #001621;
+    gap: 20px;
+    
+}
+
+.personaje {
+    width: 22%;
+    height: auto;
+    background-color: #001621;
+    box-sizing: border-box; 
+    border: 1px solid aliceblue;
+   /* display: inline-block; */
+    text-align: center;
+}
+
+.imagen-personaje img {
+    width: 60%; height: auto;    margin: 5px;
+    background-color: aliceblue;
+    align-items: center;
+}
+
+
+/* Sección 3 DISCOGRAFIA  ----------------------------------------------------------------*/
+
+#seccionTres{
+    background-color: #19091a;
+    text-align: center;
+}
+
+
+/* Sección 4 COLABORACIONES ----------------------------------------------------------------*/
+
+  #seccionCuatro {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1eab8d;
+
+}
+
+.portada {
+    position: relative;
+    width: 20%; height: auto;
+    margin: 2%;
+}
+
+.portada img {
+    width: 100%; height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.play {
+    position: absolute;
+    top: 50%; left: 50%;
+    color: aliceblue;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    border: 2px solid aliceblue;
+    padding: 5px 10px;
+}
+
+.portada:hover img {
+    opacity: 0.7;
+}
+
+
+.boton-play {
+    display: none; 
+    width: 80%; 
+    padding: 10px;
+    background-color: #df083e;
+    color: aliceblue;
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 5px;
+  
+}
+
+/* QUITAR EL PLAY */
+@media (max-width: 720px) {
+    .portada:hover img {
+        opacity: 1; 
+    }
+
+    .play {
+        display: none; 
+    }
+
+    .boton-play {
+        display: block; 
+    }
+}
+
+/* FOOTER  ----------------------------------------------------------------*/
+footer {
+    width: 100%; 
+    height: 120px;
+    background-color: #491a49;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+
+
+/*  TABLETS / PANTALLAS MEDIANAS ----------------------------------------------------------------*/
+@media screen and (max-width: 720px)  {
+    /* Ajustar el tamaño del logo */
+    .logo img {
+        width: 150px;
+       
+    }
+
+    nav {
+        flex-direction: row;
+        height: auto;
+        padding: 10px 0;
+        background-color: #df083e;
+    }
+
+    nav a {
+        display: block; 
+        padding: 10px;
+        text-align: center;
+    }
+    
+    #seccionUno {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+   
+
+    .bandaCompleta img {
+        width: 60%;
+    }
+
+    #Presentacion {
+        margin: 20px;
+        font-size: 16px;
+    }
+
+    #seccionDos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .personaje {
+        width: 45%; 
+        margin: 5px;
+    }
+
+    #seccionCuatro {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .portada {
+        width: 45%; 
+        margin: 5px;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+}
+
+/*  CELULARES , TELEFONOS PEQUEñOS----------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+ nav a {
+    display: none;
+}
+
+.topnav {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;   
+}
+
+.topnav a.icon {
+    display: block;  padding-left: 5%;
+    
+}
+
+.topnav.responsive {
+    flex-direction: column; 
+ }
+
+.topnav.responsive a {
+    width: 100%; 
+    float: none;
+    display: block;
+    text-align: left;  
+    padding-left: 5%;
+   ;
+}
+
+
+    #seccionUno {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;   
+        background-image: url('IMG/BandaG2.jpg');  
+        background-size: cover;  
+        background-position: center;       
+    }
+
+    .bandaCompleta img{
+       display: none;
+    }
+
+    #seccionDos {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;     
+    }
+
+    .personaje {
+        width: 80%;   
+        margin: 10px 0;  
+    }
+
+    #seccionCuatro {
+        display: flex;
+        flex-direction: column;   
+        align-items: center;      
+        gap: 10px;
+    }
+
+    .portada {
+        width: 80%;   
+        margin: 10px 0;  
+    }
+    
+}
+
